@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="swp-version" content="V7-FINAL-LINKED-2026-10-05"><title>SWP FAMILY TREE</title>
+<meta name="swp-version" content="V8-NEW-DEPLOYMENT-2026-10-05"><title>SWP FAMILY TREE</title>
 <style>
 :root{--n:#062b55;--n2:#0a4075;--g:#d7aa43;--cream:#fff7e4;--bg:#eef3f7;--ink:#10243a;--muted:#6b7b8e;--green:#159447;--red:#c82b35;--pink:#e83e8c;--blue:#1476df;--orange:#f18b24;--violet:#7b43db}
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.hidden{display:none!important}
@@ -60,7 +60,7 @@ body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!importa
 <section id="familiesPage" class="admin-page hidden"><h2>إدارة العائلات</h2><form id="familyForm"><div class="grid"><div class="field"><label>اسم العائلة</label><input id="newFamily" required></div><div class="field"><label>يوزر مدير العائلة</label><input id="managerUser" required></div><div class="field"><label>كلمة السر</label><input id="managerPass" type="password" required></div></div><button class="btn primary">إنشاء العائلة</button></form><div id="familyMsg"></div><div class="tableWrap"><table><thead><tr><th>رقم</th><th>العائلة</th><th>الورقة</th><th>الحالة</th><th></th></tr></thead><tbody id="familyRows"></tbody></table></div></section>
 <section id="usersPage" class="admin-page hidden"><h2>مستخدمو العائلة</h2><form id="addUserForm"><div class="grid"><div class="field"><label>اسم المستخدم</label><input id="newUser" required></div><div class="field"><label>كلمة السر</label><input id="newPass" type="password" required></div><div class="field"><label>الصلاحية</label><select id="newRole"><option value="EDITOR">مستخدم - إضافة وتعديل</option><option value="VIEWER">مشاهدة فقط</option><option value="MANAGER">مدير العائلة</option></select></div></div><button class="btn primary">إضافة مستخدم</button></form><div id="userMsg"></div><div class="tableWrap"><table><thead><tr><th>المستخدم</th><th>الصلاحية</th><th>الحالة</th><th></th></tr></thead><tbody id="userRows"></tbody></table></div></section>
 </main>
-<footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج <span style="opacity:.55">• V7</span></b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
+<footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج <span style="opacity:.55">• V8</span></b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
 </div>
 
 <div id="otpModal" class="modal hidden"><div class="modalCard"><h3>رمز تحقق الأدمن</h3><form id="otpForm"><div class="field"><label>OTP</label><input id="otp" maxlength="6" inputmode="numeric" required></div><button class="btn primary" style="width:100%">تحقق ودخول</button></form><div id="otpMsg"></div></div></div>
@@ -69,7 +69,7 @@ body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!importa
 <div id="eventModal" class="modal hidden"><div class="modalCard"><h3>إضافة مناسبة مؤقتة — 3 أيام</h3><form id="eventForm"><div class="field"><label>اختر الفرد</label><select id="eventPerson" required></select></div><div class="field"><label>نوع المناسبة</label><select id="eventType"><option value="MARRIAGE">زواج</option><option value="ILLNESS">مرض</option><option value="HELP">مساعدة / احتياج</option><option value="DEATH_NOTICE">وفاة حديثة</option><option value="GRADUATION">تخرج</option><option value="JOB">عمل جديد</option><option value="OTHER">أخرى</option></select></div><div class="field"><label>تفاصيل</label><textarea id="eventText" rows="3"></textarea></div><button class="btn primary">حفظ المناسبة</button><button type="button" class="btn" id="closeEvent">إلغاء</button></form><div id="eventMsg"></div></div></div>
 
 <script>
-const API="https://script.google.com/macros/s/AKfycbwY7DI6SwvA3fJRqLrd7fqEfE-XpQKTFhcX1w05xhgsDRiDpgAtVQbWagwpUuEIq7U2Ng/exec";let token="",role="",sessionType="",familyId=null,familyName="",people=[],news=[],events=[],selectedParent=null,otpId="",zoom=1;
+const API="https://script.google.com/macros/s/AKfycbyjH2tRC9gADZVcmVcEpyjbqWR4MyWVAn1IQMxo5sgf3LQ84AofK29Kwk69EEfKNiVD9w/exec";let token="",role="",sessionType="",familyId=null,familyName="",people=[],news=[],events=[],selectedParent=null,otpId="",zoom=1;
 const $=id=>document.getElementById(id), esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
 async function api(action,data={}){
  const endpoint=API+(API.includes("?")?"&":"?")+"v=7&t="+Date.now();
