@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SWP FAMILY TREE</title>
+<meta name="swp-version" content="V7-FINAL-LINKED-2026-10-05"><title>SWP FAMILY TREE</title>
 <style>
 :root{--n:#062b55;--n2:#0a4075;--g:#d7aa43;--cream:#fff7e4;--bg:#eef3f7;--ink:#10243a;--muted:#6b7b8e;--green:#159447;--red:#c82b35;--pink:#e83e8c;--blue:#1476df;--orange:#f18b24;--violet:#7b43db}
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.hidden{display:none!important}
@@ -54,13 +54,13 @@ body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!importa
 <div class="layout">
 <aside class="leftcol"><div class="panel"><h3>أدوات الشجرة</h3><div class="side-list"><button id="addRootBtn">👤 إضافة الجد الأكبر</button><button id="addNewsBtn">📢 إضافة خبر متحرك</button><button id="addEventBtn">📅 إضافة مناسبة</button></div></div><div class="panel"><h3>إحصائيات تفصيلية</h3><div class="panel-body"><div class="agebar"><span>أقل من 18</span><div class="bar"><i id="bar1"></i></div><b id="bar1n">0</b></div><div class="agebar"><span>18 - 40</span><div class="bar"><i id="bar2"></i></div><b id="bar2n">0</b></div><div class="agebar"><span>41 - 60</span><div class="bar"><i id="bar3"></i></div><b id="bar3n">0</b></div><div class="agebar"><span>أكبر من 60</span><div class="bar"><i id="bar4"></i></div><b id="bar4n">0</b></div></div></div></aside>
 <section class="tree-shell"><div id="treeStage" class="tree-stage"><div id="tree" class="tree"></div></div><div class="roots">الجذور</div></section>
-<aside class="rightcol"><div class="panel"><h3>آخر الأخبار المتحركة (48 ساعة)</h3><div id="newsList" class="panel-body events"></div></div><div class="panel"><h3>المناسبات الحالية (3 أيام)</h3><div id="eventList" class="panel-body events"></div></div><div class="panel"><h3>ملاحظات</h3><div class="panel-body" style="font-size:11px;line-height:1.9">• المتوفى حالة دائمة ولا ينشئ مناسبة وفاة تلقائيًا.<br>• المناسبة المؤقتة تختفي بعد 72 ساعة.<br>• الخبر المتحرك يختفي بعد 48 ساعة.<br>• الهاتف اختياري لكل فرد.<br>• الشجرة تضبط حجم البطاقات تلقائيًا مع زيادة الأفراد.</div></div></aside>
+<aside class="rightcol"><div class="panel"><h3>آخر الأخبار المتحركة (48 ساعة)</h3><div id="newsList" class="panel-body events"></div></div><div class="panel" id="eventsAnchor" style="scroll-margin-top:18px"><h3>المناسبات الحالية (3 أيام)</h3><div id="eventList" class="panel-body events"></div></div><div class="panel"><h3>ملاحظات</h3><div class="panel-body" style="font-size:11px;line-height:1.9">• المتوفى حالة دائمة ولا ينشئ مناسبة وفاة تلقائيًا.<br>• المناسبة المؤقتة تختفي بعد 72 ساعة.<br>• الخبر المتحرك يختفي بعد 48 ساعة.<br>• الهاتف اختياري لكل فرد.<br>• الشجرة تضبط حجم البطاقات تلقائيًا مع زيادة الأفراد.</div></div></aside>
 </div></div>
 
 <section id="familiesPage" class="admin-page hidden"><h2>إدارة العائلات</h2><form id="familyForm"><div class="grid"><div class="field"><label>اسم العائلة</label><input id="newFamily" required></div><div class="field"><label>يوزر مدير العائلة</label><input id="managerUser" required></div><div class="field"><label>كلمة السر</label><input id="managerPass" type="password" required></div></div><button class="btn primary">إنشاء العائلة</button></form><div id="familyMsg"></div><div class="tableWrap"><table><thead><tr><th>رقم</th><th>العائلة</th><th>الورقة</th><th>الحالة</th><th></th></tr></thead><tbody id="familyRows"></tbody></table></div></section>
 <section id="usersPage" class="admin-page hidden"><h2>مستخدمو العائلة</h2><form id="addUserForm"><div class="grid"><div class="field"><label>اسم المستخدم</label><input id="newUser" required></div><div class="field"><label>كلمة السر</label><input id="newPass" type="password" required></div><div class="field"><label>الصلاحية</label><select id="newRole"><option value="EDITOR">مستخدم - إضافة وتعديل</option><option value="VIEWER">مشاهدة فقط</option><option value="MANAGER">مدير العائلة</option></select></div></div><button class="btn primary">إضافة مستخدم</button></form><div id="userMsg"></div><div class="tableWrap"><table><thead><tr><th>المستخدم</th><th>الصلاحية</th><th>الحالة</th><th></th></tr></thead><tbody id="userRows"></tbody></table></div></section>
 </main>
-<footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج</b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
+<footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج <span style="opacity:.55">• V7</span></b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
 </div>
 
 <div id="otpModal" class="modal hidden"><div class="modalCard"><h3>رمز تحقق الأدمن</h3><form id="otpForm"><div class="field"><label>OTP</label><input id="otp" maxlength="6" inputmode="numeric" required></div><button class="btn primary" style="width:100%">تحقق ودخول</button></form><div id="otpMsg"></div></div></div>
@@ -71,20 +71,77 @@ body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!importa
 <script>
 const API="https://script.google.com/macros/s/AKfycbwY7DI6SwvA3fJRqLrd7fqEfE-XpQKTFhcX1w05xhgsDRiDpgAtVQbWagwpUuEIq7U2Ng/exec";let token="",role="",sessionType="",familyId=null,familyName="",people=[],news=[],events=[],selectedParent=null,otpId="",zoom=1;
 const $=id=>document.getElementById(id), esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
-async function api(action,data={}){const r=await fetch(API,{method:"POST",mode:"cors",credentials:"omit",redirect:"follow",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action,...data})});const t=await r.text();if(t.trim().startsWith("<"))throw new Error("الخادم أعاد صفحة Google بدلاً من JSON. حدّث نشر Apps Script إلى أحدث إصدار.");try{return JSON.parse(t)}catch(e){throw new Error("استجابة غير صالحة من الخادم")}}
+async function api(action,data={}){
+ const endpoint=API+(API.includes("?")?"&":"?")+"v=7&t="+Date.now();
+ let r;
+ try{
+  r=await fetch(endpoint,{
+   method:"POST",
+   mode:"cors",
+   credentials:"omit",
+   redirect:"follow",
+   cache:"no-store",
+   referrerPolicy:"no-referrer",
+   headers:{"Content-Type":"text/plain;charset=UTF-8","Accept":"application/json,text/plain,*/*"},
+   body:JSON.stringify({action,...data})
+  });
+ }catch(e){
+  throw new Error("تعذر الاتصال بخادم SWP. افتح رابط تطبيق الويب /exec وتأكد أنه ONLINE.");
+ }
+ const t=await r.text();
+ const ct=(r.headers.get("content-type")||"").toLowerCase();
+ if(!r.ok)throw new Error("خادم SWP أعاد HTTP "+r.status);
+ if(t.trim().startsWith("<")||ct.includes("text/html")){
+  throw new Error("رابط Apps Script الحالي يعيد صفحة Google وليس SWP API. أعد نشر Code.gs V5 كـ Web app: Execute as Me / Who has access Anyone.");
+ }
+ try{
+  const obj=JSON.parse(t);
+  return obj;
+ }catch(e){
+  throw new Error("خادم SWP أعاد استجابة غير JSON.");
+ }
+}
 function msg(el,t,b=false){el.className="msg"+(b?" error":"");el.textContent=t}function pct(n,t){return t?Math.round(n*1000/t)/10:0}
 function loginMode(a){$("adminLogin").classList.toggle("hidden",!a);$("userLogin").classList.toggle("hidden",a);$("tabAdmin").classList.toggle("active",a);$("tabUser").classList.toggle("active",!a)}
 $("tabAdmin").onclick=()=>loginMode(true);$("tabUser").onclick=()=>loginMode(false);
 $("adminLogin").onsubmit=async e=>{e.preventDefault();try{let r=await api("adminLogin",{username:$("aUser").value.trim(),password:$("aPass").value});if(!r.success)return msg($("loginMsg"),r.message,true);otpId=r.otpId;$("otpModal").classList.remove("hidden")}catch(x){msg($("loginMsg"),x.message,true)}};
 $("otpForm").onsubmit=async e=>{e.preventDefault();try{let r=await api("verifyAdminOTP",{otpId,otp:$("otp").value.trim()});if(!r.success)return msg($("otpMsg"),r.message,true);token=r.token;role="ADMIN";sessionType="ADMIN";enter();await loadFamilies()}catch(x){msg($("otpMsg"),x.message,true)}};
 $("userLogin").onsubmit=async e=>{e.preventDefault();try{let r=await api("userLogin",{familyName:$("lFamily").value.trim(),username:$("lUser").value.trim(),password:$("lPass").value});if(!r.success)return msg($("loginMsg"),r.message,true);token=r.token;role=r.role;sessionType="USER";familyId=+r.familyId;familyName=r.familyName;enter();await loadAll()}catch(x){msg($("loginMsg"),x.message,true)}};
-function enter(){$("loginView").classList.add("hidden");$("otpModal").classList.add("hidden");$("app").classList.remove("hidden");$("who").textContent=sessionType==="ADMIN"?"الأدمن":role+" — "+familyName;$("familiesBtn").classList.toggle("hidden",sessionType!=="ADMIN");$("usersBtn").classList.toggle("hidden",role==="VIEWER");$("printBtn").classList.toggle("hidden",sessionType!=="ADMIN")}
+function enter(){
+ $("loginView").classList.add("hidden");
+ $("otpModal").classList.add("hidden");
+ $("app").classList.remove("hidden");
+ $("who").textContent=sessionType==="ADMIN"?"الأدمن":role+" — "+familyName;
+ $("familiesBtn").classList.toggle("hidden",sessionType!=="ADMIN");
+ $("usersBtn").classList.toggle("hidden",!(sessionType==="ADMIN"||role==="MANAGER"));
+ $("printBtn").classList.toggle("hidden",sessionType!=="ADMIN");
+ const editOK=sessionType==="ADMIN"||role==="MANAGER"||role==="EDITOR";
+ $("addNewsBtn").classList.toggle("hidden",!editOK);
+ $("addEventBtn").classList.toggle("hidden",!editOK);
+ $("addRootBtn").classList.toggle("hidden",!editOK);
+}
 function show(id){["treePage","familiesPage","usersPage"].forEach(x=>$(x).classList.add("hidden"));$(id).classList.remove("hidden")}
-$("homeBtn").onclick=$("treeBtn").onclick=()=>{if(familyId)loadAll();else show("familiesPage")};$("eventsBtn").onclick=()=>{if(familyId){show("treePage");$("eventList").scrollIntoView({behavior:"smooth"})}};$("familiesBtn").onclick=()=>loadFamilies();$("usersBtn").onclick=()=>loadUsers();$("logout").onclick=()=>location.reload();
-async function loadFamilies(){show("familiesPage");let r=await api("listFamilies",{token});if(!r.success)return alert(r.message);$("familyRows").innerHTML=(r.families||[]).map(f=>`<tr><td>${f.familyId}</td><td>${esc(f.familyName)}</td><td>${esc(f.sheetName)}</td><td>${esc(f.status)}</td><td><button class="btn openF" data-id="${f.familyId}" data-name="${esc(f.familyName)}">فتح</button></td></tr>`).join("");document.querySelectorAll(".openF").forEach(b=>b.onclick=async()=>{familyId=+b.dataset.id;familyName=b.dataset.name;await loadAll()})}
-$("familyForm").onsubmit=async e=>{e.preventDefault();let r=await api("createFamily",{token,familyName:$("newFamily").value.trim(),username:$("managerUser").value.trim(),password:$("managerPass").value});msg($("familyMsg"),r.message,!r.success);if(r.success){e.target.reset();loadFamilies()}};
-async function loadAll(){show("treePage");await Promise.all([loadTree(),loadNews(),loadEvents()])}
-async function loadTree(){let r=await api("getFamilyTree",{token,familyId});if(!r.success)return alert(r.message);familyId=+r.family.familyId;familyName=r.family.familyName;$("familyTitle").textContent="شجرة عائلة "+familyName;$("who").textContent=(sessionType==="ADMIN"?"الأدمن":role)+" — "+familyName;people=(r.people||[]).map(p=>({id:+p.personId,parentId:p.parentId===""||p.parentId==null?null:+p.parentId,name:p.name,phone:p.phone||"",age:p.age===""?null:+p.age,job:p.job||"",gender:(p.gender||"M").toUpperCase(),life:(p.lifeStatus||"ALIVE").toUpperCase()}));renderStats();renderTree();fillPeople()}
+function setActiveNav(id){document.querySelectorAll(".nav button").forEach(b=>b.classList.remove("active"));if($(id))$(id).classList.add("active")}
+async function openTree(){setActiveNav("treeBtn");if(familyId){await loadAll();return}if(sessionType==="ADMIN"){await loadFamilies();msg($("familyMsg"),"اختر العائلة من زر «فتح» لعرض شجرتها.",false);return}alert("لم يتم تحديد العائلة")}
+$("homeBtn").onclick=async()=>{setActiveNav("homeBtn");if(familyId)await loadAll();else if(sessionType==="ADMIN")await loadFamilies()};
+$("treeBtn").onclick=openTree;
+$("eventsBtn").onclick=async()=>{setActiveNav("eventsBtn");if(!familyId){if(sessionType==="ADMIN"){await loadFamilies();msg($("familyMsg"),"اختر العائلة أولاً لعرض مناسباتها.",false)}return}await loadAll();setTimeout(()=>{const a=$("eventsAnchor");if(a)a.scrollIntoView({behavior:"smooth",block:"start"})},100)};
+$("familiesBtn").onclick=async()=>{setActiveNav("familiesBtn");await loadFamilies()};
+$("usersBtn").onclick=async()=>{setActiveNav("usersBtn");if(!familyId){alert("اختر العائلة أولاً");if(sessionType==="ADMIN")await loadFamilies();return}await loadUsers()};
+$("logout").onclick=()=>location.reload();
+async function loadFamilies(){try{show("familiesPage");let r=await api("listFamilies",{token});if(!r.success){alert(r.message);return}$("familyRows").innerHTML=(r.families||[]).map(f=>`<tr><td>${f.familyId}</td><td>${esc(f.familyName)}</td><td>${esc(f.sheetName)}</td><td>${esc(f.status)}</td><td><button class="btn openF" data-id="${f.familyId}" data-name="${esc(f.familyName)}">فتح الشجرة</button></td></tr>`).join("")||`<tr><td colspan="5">لا توجد عائلات بعد</td></tr>`;document.querySelectorAll(".openF").forEach(b=>b.onclick=async()=>{familyId=Number(b.dataset.id);familyName=b.dataset.name;setActiveNav("treeBtn");await loadAll()})}catch(x){alert("تعذر فتح العائلات: "+x.message)}}
+$("familyForm").onsubmit=async e=>{e.preventDefault();try{let r=await api("createFamily",{token,familyName:$("newFamily").value.trim(),username:$("managerUser").value.trim(),password:$("managerPass").value});msg($("familyMsg"),r.message,!r.success);if(r.success){e.target.reset();familyId=Number(r.familyId);familyName=r.familyName;await loadAll();setActiveNav("treeBtn")}}catch(x){msg($("familyMsg"),x.message,true)}};
+async function loadAll(){
+ show("treePage");
+ try{await loadTree()}catch(x){alert("تعذر تحميل شجرة العائلة: "+x.message);return}
+ await Promise.allSettled([loadNews(),loadEvents()]);
+}
+async function loadTree(){let r=await api("getFamilyTree",{token,familyId});if(!r.success)return alert(r.message);familyId=+r.family.familyId;familyName=r.family.familyName;$("familyTitle").textContent="شجرة عائلة "+familyName;$("who").textContent=(sessionType==="ADMIN"?"الأدمن":role)+" — "+familyName;people=(r.people||[]).map(p=>({id:+p.personId,parentId:p.parentId===""||p.parentId==null?null:+p.parentId,name:p.name,phone:p.phone||"",age:p.age===""?null:+p.age,job:p.job||"",gender:(p.gender||"M").toUpperCase(),life:(p.lifeStatus||"ALIVE").toUpperCase()}));
+ const editOK=canEdit();
+ $("addRootBtn").classList.toggle("hidden",!editOK||people.length>0);
+ $("addNewsBtn").disabled=people.length===0;
+ $("addEventBtn").disabled=people.length===0;
+ renderStats();renderTree();fillPeople()}
 function roots(){return people.filter(p=>p.parentId==null||!people.some(x=>x.id===p.parentId))}function kids(id){return people.filter(p=>p.parentId===id)}
 function node(p){return `<li><button class="person ${p.gender==="F"?"female":""} ${p.life==="DEAD"?"dead":""} ${p.parentId==null?"root":""}" data-person="${p.id}"><span class="avatar">${p.gender==="F"?"👩":"👨"}</span><span class="pname">${esc(p.name)}</span><span class="pmeta">${p.age!=null?esc(p.age)+" سنة":""}${p.job?" • "+esc(p.job):""}</span>${p.phone?`<span class="pphone">☎ ${esc(p.phone)}</span>`:""}<span class="life">${p.life==="DEAD"?"متوفى":"● حي"}</span></button>${kids(p.id).length?`<ul>${kids(p.id).map(node).join("")}</ul>`:""}</li>`}
 function renderTree(){$("tree").innerHTML=people.length?`<ul>${roots().map(node).join("")}</ul>`:`<div style="background:#fff;padding:25px;border-radius:12px">لا يوجد أفراد بعد — ابدأ بإضافة الجد الأكبر.</div>`;document.querySelectorAll("[data-person]").forEach(b=>b.onclick=()=>openPerson(+b.dataset.person));autoFit()}
@@ -92,13 +149,36 @@ function autoFit(){let n=people.length;let z=n<=12?1:n<=30?.86:n<=60?.72:n<=100?
 function setZoom(z){zoom=Math.max(.38,Math.min(1.5,z));$("treeStage").style.zoom=zoom}$("zoomIn").onclick=()=>setZoom(zoom+.08);$("zoomOut").onclick=()=>setZoom(zoom-.08);$("zoomReset").onclick=autoFit;
 function renderStats(){let t=people.length,l=people.filter(p=>p.life!=="DEAD").length,d=t-l,a1=0,a2=0,a3=0,a4=0;people.filter(p=>p.life!=="DEAD"&&p.age!=null).forEach(p=>p.age<18?a1++:p.age<=40?a2++:p.age<=60?a3++:a4++);$("stTotal").textContent=t;$("stLive").textContent=l;$("stDead").textContent=d;$("stLivePct").textContent=pct(l,t)+"%";$("stDeadPct").textContent=pct(d,t)+"%";[a1,a2,a3,a4].forEach((v,i)=>{$("stA"+(i+1)).textContent=v;$("bar"+(i+1)+"n").textContent=v;$("bar"+(i+1)).style.width=(t?pct(v,t):0)+"%"})}
 function canEdit(){return sessionType==="ADMIN"||role==="MANAGER"||role==="EDITOR"}function openPerson(id){if(!canEdit())return;selectedParent=id;let p=people.find(x=>x.id===id);$("personTitle").textContent="إضافة فرع تحت: "+p.name;$("personForm").reset();$("personModal").classList.remove("hidden")}
-$("addRootBtn").onclick=()=>{if(!canEdit())return;selectedParent=null;$("personTitle").textContent="إضافة الجد الأكبر";$("personForm").reset();$("personModal").classList.remove("hidden")};$("closePerson").onclick=()=>$("personModal").classList.add("hidden");
+$("addRootBtn").onclick=()=>{if(!canEdit())return;if(people.length){alert("الجد الأكبر موجود بالفعل. أضف الفروع بالضغط على الشخص المطلوب.");return}selectedParent=null;$("personTitle").textContent="إضافة الجد الأكبر";$("personForm").reset();$("personModal").classList.remove("hidden")};$("closePerson").onclick=()=>$("personModal").classList.add("hidden");
 $("personForm").onsubmit=async e=>{e.preventDefault();let r=await api("addPerson",{token,familyId,parentId:selectedParent,name:$("pName").value.trim(),phone:$("pPhone").value.trim(),age:$("pAge").value,job:$("pJob").value.trim(),gender:$("pGender").value,lifeStatus:$("pLife").value});msg($("personMsg"),r.message,!r.success);if(r.success){$("personModal").classList.add("hidden");loadAll()}};
 function fillPeople(){let o=people.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("");$("newsPerson").innerHTML=o;$("eventPerson").innerHTML=o}
-async function loadNews(){let r=await api("listNews",{token,familyId});news=r.success?(r.news||[]):[];let html=news.map(n=>`<span class="news-item">📰 <b>${esc(n.personName)}</b> ${esc(n.text)} <small>• ${esc(n.remaining||"")}</small></span>`).join("");$("tickerTrack").innerHTML=html||`<span class="news-item">لا توجد أخبار حالية</span>`;$("newsList").innerHTML=news.map(n=>`<div class="event"><b>${esc(n.personName)}</b>${esc(n.text)}<small>${esc(n.remaining||"")}</small></div>`).join("")||"لا توجد أخبار"}
-async function loadEvents(){let r=await api("listEvents",{token,familyId});events=r.success?(r.events||[]):[];$("eventList").innerHTML=events.map(n=>`<div class="event"><b>${esc(n.personName)} — ${esc(n.eventLabel||n.eventType)}</b>${esc(n.text||"")}<small>${esc(n.remaining||"")}</small></div>`).join("")||"لا توجد مناسبات"}
-$("addNewsBtn").onclick=()=>{if(canEdit()){$("newsModal").classList.remove("hidden");fillPeople()}};$("closeNews").onclick=()=>$("newsModal").classList.add("hidden");$("newsForm").onsubmit=async e=>{e.preventDefault();let r=await api("addNews",{token,familyId,personId:+$("newsPerson").value,text:$("newsText").value.trim()});msg($("newsMsg"),r.message,!r.success);if(r.success){e.target.reset();$("newsModal").classList.add("hidden");loadNews()}};
-$("addEventBtn").onclick=()=>{if(canEdit()){$("eventModal").classList.remove("hidden");fillPeople()}};$("closeEvent").onclick=()=>$("eventModal").classList.add("hidden");$("eventForm").onsubmit=async e=>{e.preventDefault();let r=await api("addEvent",{token,familyId,personId:+$("eventPerson").value,eventType:$("eventType").value,text:$("eventText").value.trim()});msg($("eventMsg"),r.message,!r.success);if(r.success){e.target.reset();$("eventModal").classList.add("hidden");loadEvents()}};
+async function loadNews(){
+ try{
+  let r=await api("listNews",{token,familyId});
+  if(!r.success)throw new Error(r.message||"تعذر تحميل الأخبار");
+  news=r.news||[];
+  let html=news.map(n=>`<span class="news-item">📰 <b>${esc(n.personName)}</b> ${esc(n.text)} <small>• ${esc(n.remaining||"")}</small></span>`).join("");
+  $("tickerTrack").innerHTML=html||`<span class="news-item">لا توجد أخبار حالية</span>`;
+  $("newsList").innerHTML=news.map(n=>`<div class="event"><b>${esc(n.personName)}</b>${esc(n.text)}<small>${esc(n.remaining||"")}</small></div>`).join("")||"لا توجد أخبار";
+ }catch(x){
+  $("tickerTrack").innerHTML=`<span class="news-item">تعذر تحميل الأخبار</span>`;
+  $("newsList").textContent="تعذر تحميل الأخبار: "+x.message;
+  throw x;
+ }
+}
+async function loadEvents(){
+ try{
+  let r=await api("listEvents",{token,familyId});
+  if(!r.success)throw new Error(r.message||"تعذر تحميل المناسبات");
+  events=r.events||[];
+  $("eventList").innerHTML=events.map(n=>`<div class="event"><b>${esc(n.personName)} — ${esc(n.eventLabel||n.eventType)}</b>${esc(n.text||"")}<small>${esc(n.remaining||"")}</small></div>`).join("")||"لا توجد مناسبات";
+ }catch(x){
+  $("eventList").textContent="تعذر تحميل المناسبات: "+x.message;
+  throw x;
+ }
+}
+$("addNewsBtn").onclick=()=>{if(!canEdit())return;if(!people.length){alert("أضف الجد الأكبر أولاً");return}$("newsModal").classList.remove("hidden");fillPeople()};$("closeNews").onclick=()=>$("newsModal").classList.add("hidden");$("newsForm").onsubmit=async e=>{e.preventDefault();let r=await api("addNews",{token,familyId,personId:+$("newsPerson").value,text:$("newsText").value.trim()});msg($("newsMsg"),r.message,!r.success);if(r.success){e.target.reset();$("newsModal").classList.add("hidden");loadNews()}};
+$("addEventBtn").onclick=()=>{if(!canEdit())return;if(!people.length){alert("أضف الجد الأكبر أولاً");return}$("eventModal").classList.remove("hidden");fillPeople()};$("closeEvent").onclick=()=>$("eventModal").classList.add("hidden");$("eventForm").onsubmit=async e=>{e.preventDefault();let r=await api("addEvent",{token,familyId,personId:+$("eventPerson").value,eventType:$("eventType").value,text:$("eventText").value.trim()});msg($("eventMsg"),r.message,!r.success);if(r.success){e.target.reset();$("eventModal").classList.add("hidden");loadEvents()}};
 $("searchBtn").onclick=()=>{let q=$("search").value.trim().toLowerCase(),p=people.find(x=>x.name.toLowerCase().includes(q)||x.phone.includes(q));if(!p)return alert("غير موجود");document.querySelector(`[data-person="${p.id}"]`)?.scrollIntoView({behavior:"smooth",block:"center",inline:"center"})};
 $("printBtn").onclick=()=>{if(sessionType!=="ADMIN")return;
  const oldZoom=zoom;
@@ -112,6 +192,20 @@ $("printBtn").onclick=()=>{if(sessionType!=="ADMIN")return;
  window.addEventListener("afterprint",restore);
  setTimeout(()=>window.print(),180);
 };
-async function loadUsers(){show("usersPage");let r=await api("listUsers",{token,familyId});if(!r.success)return alert(r.message);$("userRows").innerHTML=(r.users||[]).map(u=>`<tr><td>${esc(u.username)}</td><td>${esc(u.role)}</td><td>${String(u.active).toLowerCase()==="true"?"نشط":"موقوف"}</td><td><button class="btn toggleU" data-id="${u.userId}" data-active="${u.active}">${String(u.active).toLowerCase()==="true"?"إيقاف":"تفعيل"}</button></td></tr>`).join("");document.querySelectorAll(".toggleU").forEach(b=>b.onclick=async()=>{await api("setUserStatus",{token,userId:+b.dataset.id,active:String(b.dataset.active).toLowerCase()!=="true"});loadUsers()})}
+async function loadUsers(){
+ try{
+  show("usersPage");
+  let r=await api("listUsers",{token,familyId});
+  if(!r.success){alert(r.message);return}
+  $("userRows").innerHTML=(r.users||[]).map(u=>`<tr><td>${esc(u.username)}</td><td>${esc(u.role)}</td><td>${String(u.active).toLowerCase()==="true"?"نشط":"موقوف"}</td><td><button class="btn toggleU" data-id="${u.userId}" data-active="${u.active}">${String(u.active).toLowerCase()==="true"?"إيقاف":"تفعيل"}</button></td></tr>`).join("")||`<tr><td colspan="4">لا يوجد مستخدمون</td></tr>`;
+  document.querySelectorAll(".toggleU").forEach(b=>b.onclick=async()=>{
+   try{
+    const r2=await api("setUserStatus",{token,userId:+b.dataset.id,active:String(b.dataset.active).toLowerCase()!=="true"});
+    if(!r2.success){alert(r2.message);return}
+    await loadUsers();
+   }catch(x){alert(x.message)}
+  });
+ }catch(x){alert("تعذر فتح المستخدمين: "+x.message)}
+}
 $("addUserForm").onsubmit=async e=>{e.preventDefault();let r=await api("createUser",{token,familyId,username:$("newUser").value.trim(),password:$("newPass").value,role:$("newRole").value});msg($("userMsg"),r.message,!r.success);if(r.success){e.target.reset();loadUsers()}};
 </script></body></html>
