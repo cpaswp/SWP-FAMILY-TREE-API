@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="swp-version" content="V8-NEW-DEPLOYMENT-2026-10-05"><title>SWP FAMILY TREE</title>
+<meta name="swp-version" content="V9-TREE-CONTROLS-2026-10-06"><title>SWP FAMILY TREE</title>
 <style>
 :root{--n:#062b55;--n2:#0a4075;--g:#d7aa43;--cream:#fff7e4;--bg:#eef3f7;--ink:#10243a;--muted:#6b7b8e;--green:#159447;--red:#c82b35;--pink:#e83e8c;--blue:#1476df;--orange:#f18b24;--violet:#7b43db}
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.hidden{display:none!important}
@@ -11,13 +11,13 @@
 .family-head{position:relative;display:grid;grid-template-columns:180px 1fr 130px;align-items:center;gap:14px;padding:4px 18px 12px}.brandLogo{height:62px;border:1px solid #d7aa4388;border-radius:10px;background:#020b15;overflow:hidden}.brandLogo img{width:100%;height:100%;object-fit:contain}.family-name{text-align:center}.family-name h1{margin:0;color:#f0c762;font-size:28px}.family-name div{font-size:12px;color:#e5edf5}
 .nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:7px 15px;background:#fff;border-bottom:1px solid #d8e0e8}.nav button{border:0;background:transparent;padding:9px 13px;border-radius:8px;color:var(--n);font-weight:bold;cursor:pointer}.nav button:hover,.nav button.active{background:var(--n);color:#fff}.spacer{flex:1}.who{font-size:12px;font-weight:bold}
 .ticker{display:flex;align-items:center;background:#041f3c;color:#fff;border-bottom:2px solid var(--g);height:42px;overflow:hidden}.ticker-label{background:linear-gradient(135deg,#a91925,#e22b36);height:100%;display:flex;align-items:center;padding:0 18px;font-weight:bold;white-space:nowrap}.ticker-window{overflow:hidden;flex:1}.ticker-track{display:flex;gap:28px;white-space:nowrap;width:max-content;animation:ticker 32s linear infinite}.ticker:hover .ticker-track{animation-play-state:paused}.news-item{display:inline-flex;gap:8px;align-items:center;padding:0 10px}.news-item b{color:#f3cb69}.news-item small{color:#b9c8d8}@keyframes ticker{from{transform:translateX(-5%)}to{transform:translateX(55%)}}
-.page{max-width:1700px;margin:auto;padding:12px}.stats{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:10px}.stat{background:#fff;border:1px solid #dfe6ed;border-radius:12px;padding:11px;text-align:center;min-width:0}.stat b{display:block;font-size:23px;margin-top:3px}.stat small{color:var(--muted)}.s-total b{color:var(--n)}.s-live b{color:var(--green)}.s-dead b{color:var(--red)}.s-a1 b{color:var(--blue)}.s-a2 b{color:#168b63}.s-a3 b{color:var(--orange)}.s-a4 b{color:var(--violet)}
+.page{max-width:1700px;margin:auto;padding:12px}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:10px}.stat{background:#fff;border:1px solid #dfe6ed;border-radius:12px;padding:11px;text-align:center;min-width:0}.stat b{display:block;font-size:23px;margin-top:3px}.stat small{color:var(--muted)}.s-total b{color:var(--n)}.s-live b{color:var(--green)}.s-dead b{color:var(--red)}.s-a1 b{color:var(--blue)}.s-a2 b{color:#168b63}.s-a3 b{color:var(--orange)}.s-a4 b{color:var(--violet)}
 .toolbar{display:flex;gap:6px;flex-wrap:wrap;background:#fff;border:1px solid #dfe6ed;border-radius:11px;padding:7px;margin-bottom:9px}.toolbar input{min-width:240px;flex:1;border:1px solid #ccd6df;border-radius:8px;padding:9px}.btn{border:1px solid #ccd6df;background:#fff;color:var(--n);border-radius:8px;padding:8px 11px;font-weight:bold;cursor:pointer}.btn.primary{background:var(--n);color:#fff}.btn.gold{background:linear-gradient(#f4cf73,#c89427);color:#2e2106;border-color:#b37f19}.btn.red{background:#a9242c;color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}
 .layout{display:grid;grid-template-columns:220px minmax(0,1fr) 250px;gap:9px}.panel{background:#fff;border:1px solid #dce4ec;border-radius:11px;overflow:hidden;margin-bottom:9px}.panel h3{margin:0;background:var(--n);color:#fff;padding:10px 12px;font-size:14px}.panel-body{padding:10px}.side-list{display:grid;gap:6px}.side-list button{width:100%;text-align:right;border:0;background:#fff;padding:8px;border-bottom:1px solid #edf1f4;color:var(--n);cursor:pointer}.side-list button:hover{background:#f3f7fb}.agebar{display:grid;grid-template-columns:75px 1fr 35px;gap:5px;align-items:center;font-size:11px;margin:8px 0}.bar{height:9px;background:#edf1f5;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;background:var(--blue)}
 .tree-shell{position:relative;overflow:auto;min-height:690px;border-radius:13px;border:1px solid #d8e2ea;background:linear-gradient(#bfe4ff 0 18%,#f9e6b8 72%,#d6b66d 100%)}.tree-shell:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 65%,#1f6f3440 0 18%,transparent 45%),linear-gradient(90deg,transparent 48%,#6e3d20 48% 52%,transparent 52%);opacity:.65;pointer-events:none}
 .tree-stage{position:relative;z-index:1;min-width:100%;min-height:690px;padding:45px 30px 80px;display:flex;justify-content:center;align-items:flex-start;transform-origin:top center}
 .tree,.tree ul{padding-top:34px;position:relative;display:flex;justify-content:center;margin:0;padding-right:0;padding-left:0}.tree>ul{padding-top:0}.tree li{list-style:none;text-align:center;position:relative;padding:34px 6px 0}.tree li:before,.tree li:after{content:"";position:absolute;top:0;width:50%;height:34px;border-top:3px solid #fff;filter:drop-shadow(0 1px 1px #315)}.tree li:before{right:50%}.tree li:after{left:50%;border-right:3px solid #fff}.tree li:only-child:before,.tree li:only-child:after{display:none}.tree li:only-child{padding-top:0}.tree li:first-child:before,.tree li:last-child:after{border:0}.tree li:last-child:before{border-left:3px solid #fff}.tree ul ul:before{content:"";position:absolute;top:0;right:50%;height:34px;border-right:3px solid #fff}
-.person{--cw:138px;width:var(--cw);min-height:96px;border:3px solid var(--blue);border-radius:12px;background:#fff;padding:7px 5px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 3px 10px #0004;cursor:pointer;transition:.2s}.person:hover{transform:translateY(-3px)}.person.female{border-color:var(--pink)}.person.dead{border-color:#555;background:#f0f0f0}.person.root{border-color:var(--g);box-shadow:0 0 0 2px #4a2e0d,0 4px 12px #0005}.avatar{width:34px;height:34px;border-radius:50%;background:#e7eef5;display:grid;place-items:center;font-size:18px;margin-bottom:3px}.pname{font-size:12px;font-weight:bold}.pmeta,.pphone{font-size:10px;color:#617083;margin-top:2px}.life{font-size:10px;margin-top:3px;color:var(--green);font-weight:bold}.dead .life{color:#555}
+.person{--cw:138px;width:var(--cw);min-height:62px;border:3px solid var(--blue);border-radius:12px;background:#fff;padding:7px 5px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 3px 10px #0004;cursor:pointer;transition:.2s}.person:hover{transform:translateY(-3px)}.person.female{border-color:var(--pink)}.person.dead{border-color:#555;background:#f0f0f0}.person.root{border-color:var(--g);box-shadow:0 0 0 2px #4a2e0d,0 4px 12px #0005}.avatar{width:34px;height:34px;border-radius:50%;background:#e7eef5;display:grid;place-items:center;font-size:18px;margin-bottom:3px}.pname{font-size:12px;font-weight:bold}.pmeta,.pphone{font-size:10px;color:#617083;margin-top:2px}.life{font-size:10px;margin-top:3px;color:var(--green);font-weight:bold}.dead .life{color:#555}
 .roots{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);font-weight:bold;background:#b87b31;color:#2c1707;border:2px solid #704216;border-radius:8px;padding:7px 30px;box-shadow:0 3px 8px #0004}
 .events .event{border-right:4px solid var(--orange);padding:8px;background:#fff8e8;border-radius:7px;margin:6px 0;font-size:11px}.events .event b{display:block}.events .event small{color:var(--red)}
 .loginWrap{min-height:620px;display:grid;place-items:center;padding:25px}.loginCard{width:min(470px,100%);background:#fff;border-radius:16px;padding:24px;box-shadow:0 12px 35px #0002;text-align:center}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px 0}.tabs button.active{background:var(--n);color:#fff}.field{text-align:right;margin:9px 0}.field label{display:block;font-size:12px;font-weight:bold;margin-bottom:5px}input,select,textarea{width:100%;min-height:40px;padding:9px;border:1px solid #ccd4df;border-radius:7px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.msg{padding:9px;border-radius:7px;background:#eef4ff;color:#214f85;margin:8px 0}.error{background:#fff0f0;color:#a31e1e}
@@ -49,27 +49,42 @@ body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!importa
 
 <main class="page">
 <div id="treePage">
-<section class="stats"><div class="stat s-total">إجمالي الأفراد<b id="stTotal">0</b><small>كل أفراد العائلة</small></div><div class="stat s-live">الأحياء<b id="stLive">0</b><small id="stLivePct">0%</small></div><div class="stat s-dead">المتوفون<b id="stDead">0</b><small id="stDeadPct">0%</small></div><div class="stat s-a1">أقل من 18 سنة<b id="stA1">0</b></div><div class="stat s-a2">من 18 إلى 40 سنة<b id="stA2">0</b></div><div class="stat s-a3">من 41 إلى 60 سنة<b id="stA3">0</b></div><div class="stat s-a4">أكبر من 60 سنة<b id="stA4">0</b></div></section>
-<div class="toolbar"><input id="search" placeholder="البحث بالاسم الرباعي أو رقم الهاتف..."><button class="btn" id="searchBtn">🔎 بحث</button><button class="btn" id="zoomIn">＋</button><button class="btn" id="zoomOut">－</button><button class="btn" id="zoomReset">ملاءمة</button><button class="btn gold hidden" id="printBtn" title="يفتح نافذة الطباعة؛ اختر Save as PDF / حفظ كملف PDF">📄 حفظ الشجرة PDF</button></div>
+<section class="stats">
+<div class="stat s-total">إجمالي الأفراد<b id="stTotal">0</b><small>كل أفراد العائلة</small></div>
+<div class="stat s-live">الأحياء<b id="stLive">0</b><small id="stLivePct">0%</small></div>
+<div class="stat s-dead">المتوفون<b id="stDead">0</b><small id="stDeadPct">0%</small></div>
+<div class="stat s-a1">من سن 1 إلى 21<b id="stA1">0</b></div>
+<div class="stat s-a2">أكبر من 21<b id="stA2">0</b></div>
+</section>
+<div class="toolbar"><input id="search" placeholder="البحث بالاسم الرباعي أو رقم الهاتف..."><button class="btn" id="searchBtn">🔎 بحث</button><span class="tree-zoom" title="تكبير وتصغير الشجرة فقط"><button class="btn" id="zoomIn">＋</button><button class="btn" id="zoomOut">－</button><button class="btn" id="zoomReset" style="font-size:12px">ملاءمة الشجرة</button></span><button class="btn gold hidden" id="printBtn" title="يفتح نافذة الطباعة؛ اختر Save as PDF / حفظ كملف PDF">📄 حفظ الشجرة PDF</button></div>
 <div class="layout">
-<aside class="leftcol"><div class="panel"><h3>أدوات الشجرة</h3><div class="side-list"><button id="addRootBtn">👤 إضافة الجد الأكبر</button><button id="addNewsBtn">📢 إضافة خبر متحرك</button><button id="addEventBtn">📅 إضافة مناسبة</button></div></div><div class="panel"><h3>إحصائيات تفصيلية</h3><div class="panel-body"><div class="agebar"><span>أقل من 18</span><div class="bar"><i id="bar1"></i></div><b id="bar1n">0</b></div><div class="agebar"><span>18 - 40</span><div class="bar"><i id="bar2"></i></div><b id="bar2n">0</b></div><div class="agebar"><span>41 - 60</span><div class="bar"><i id="bar3"></i></div><b id="bar3n">0</b></div><div class="agebar"><span>أكبر من 60</span><div class="bar"><i id="bar4"></i></div><b id="bar4n">0</b></div></div></div></aside>
+<aside class="leftcol"><div class="panel"><h3>أدوات الشجرة</h3><div class="side-list"><button id="addRootBtn">👤 إضافة الجد الأكبر</button><button id="addNewsBtn">📢 إضافة خبر متحرك</button><button id="addEventBtn">📅 إضافة مناسبة</button></div></div><div class="panel"><h3>توزيع الأعمار للأحياء</h3><div class="panel-body">
+<div class="agebar"><span>1 - 21</span><div class="bar"><i id="bar1"></i></div><b id="bar1n">0</b></div>
+<div class="agebar"><span>أكبر من 21</span><div class="bar"><i id="bar2"></i></div><b id="bar2n">0</b></div>
+</div></div></aside>
 <section class="tree-shell"><div id="treeStage" class="tree-stage"><div id="tree" class="tree"></div></div><div class="roots">الجذور</div></section>
-<aside class="rightcol"><div class="panel"><h3>آخر الأخبار المتحركة (48 ساعة)</h3><div id="newsList" class="panel-body events"></div></div><div class="panel" id="eventsAnchor" style="scroll-margin-top:18px"><h3>المناسبات الحالية (3 أيام)</h3><div id="eventList" class="panel-body events"></div></div><div class="panel"><h3>ملاحظات</h3><div class="panel-body" style="font-size:11px;line-height:1.9">• المتوفى حالة دائمة ولا ينشئ مناسبة وفاة تلقائيًا.<br>• المناسبة المؤقتة تختفي بعد 72 ساعة.<br>• الخبر المتحرك يختفي بعد 48 ساعة.<br>• الهاتف اختياري لكل فرد.<br>• الشجرة تضبط حجم البطاقات تلقائيًا مع زيادة الأفراد.</div></div></aside>
+<aside class="rightcol"><div class="panel"><h3>آخر الأخبار المتحركة (48 ساعة)</h3><div id="newsList" class="panel-body events"></div></div><div class="panel" id="eventsAnchor" style="scroll-margin-top:18px"><h3>المناسبات الحالية (3 أيام)</h3><div id="eventList" class="panel-body events"></div></div></aside>
 </div></div>
 
-<section id="familiesPage" class="admin-page hidden"><h2>إدارة العائلات</h2><form id="familyForm"><div class="grid"><div class="field"><label>اسم العائلة</label><input id="newFamily" required></div><div class="field"><label>يوزر مدير العائلة</label><input id="managerUser" required></div><div class="field"><label>كلمة السر</label><input id="managerPass" type="password" required></div></div><button class="btn primary">إنشاء العائلة</button></form><div id="familyMsg"></div><div class="tableWrap"><table><thead><tr><th>رقم</th><th>العائلة</th><th>الورقة</th><th>الحالة</th><th></th></tr></thead><tbody id="familyRows"></tbody></table></div></section>
+<section id="familiesPage" class="admin-page hidden"><h2>إدارة العائلات</h2><form id="familyForm"><div class="grid"><div class="field"><label>اسم العائلة</label><input id="newFamily" required></div><div class="field"><label>يوزر مدير العائلة</label><input id="managerUser" required></div><div class="field"><label>كلمة السر</label><input id="managerPass" type="password" required></div></div><button class="btn primary">إنشاء العائلة</button></form><div id="familyMsg"></div><div class="tableWrap"><table><thead><tr><th>رقم</th><th>العائلة</th><th>الورقة</th><th>الحالة</th><th>الإجراءات</th></tr></thead><tbody id="familyRows"></tbody></table></div></section>
 <section id="usersPage" class="admin-page hidden"><h2>مستخدمو العائلة</h2><form id="addUserForm"><div class="grid"><div class="field"><label>اسم المستخدم</label><input id="newUser" required></div><div class="field"><label>كلمة السر</label><input id="newPass" type="password" required></div><div class="field"><label>الصلاحية</label><select id="newRole"><option value="EDITOR">مستخدم - إضافة وتعديل</option><option value="VIEWER">مشاهدة فقط</option><option value="MANAGER">مدير العائلة</option></select></div></div><button class="btn primary">إضافة مستخدم</button></form><div id="userMsg"></div><div class="tableWrap"><table><thead><tr><th>المستخدم</th><th>الصلاحية</th><th>الحالة</th><th></th></tr></thead><tbody id="userRows"></tbody></table></div></section>
 </main>
-<footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج <span style="opacity:.55">• V8</span></b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
+<footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج <span style="opacity:.55">• V9</span></b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
 </div>
 
 <div id="otpModal" class="modal hidden"><div class="modalCard"><h3>رمز تحقق الأدمن</h3><form id="otpForm"><div class="field"><label>OTP</label><input id="otp" maxlength="6" inputmode="numeric" required></div><button class="btn primary" style="width:100%">تحقق ودخول</button></form><div id="otpMsg"></div></div></div>
-<div id="personModal" class="modal hidden"><div class="modalCard"><h3 id="personTitle">إضافة فرد</h3><form id="personForm"><div class="field"><label>الاسم الرباعي / الخماسي *</label><input id="pName" required></div><div class="grid"><div class="field"><label>رقم الهاتف (اختياري)</label><input id="pPhone" type="tel"></div><div class="field"><label>السن</label><input id="pAge" type="number" min="0" max="130"></div><div class="field"><label>الوظيفة</label><input id="pJob"></div><div class="field"><label>الجنس</label><select id="pGender"><option value="M">ذكر</option><option value="F">أنثى</option></select></div><div class="field"><label>الحالة</label><select id="pLife"><option value="ALIVE">حي</option><option value="DEAD">متوفى</option></select></div></div><div class="actions"><button class="btn primary">حفظ</button><button type="button" class="btn" id="closePerson">إلغاء</button></div></form><div id="personMsg"></div></div></div>
+<div id="personModal" class="modal hidden"><div class="modalCard"><h3 id="personTitle">بيانات الفرد</h3>
+<div id="personActions" class="person-actions hidden">
+<button type="button" class="btn primary" id="addChildAction">＋ إضافة فرع</button>
+<button type="button" class="btn gold" id="editPersonAction">✎ تعديل</button>
+<button type="button" class="btn red" id="deletePersonAction">🗑 حذف</button>
+</div>
+<form id="personForm"><div class="field"><label>الاسم الرباعي / الخماسي *</label><input id="pName" required></div><div class="grid"><div class="field"><label>رقم الهاتف (اختياري)</label><input id="pPhone" type="tel"></div><div class="field"><label>السن</label><input id="pAge" type="number" min="0" max="130"></div><div class="field"><label>الوظيفة</label><input id="pJob"></div><div class="field"><label>الجنس</label><select id="pGender"><option value="M">ذكر</option><option value="F">أنثى</option></select></div><div class="field"><label>الحالة</label><select id="pLife"><option value="ALIVE">حي</option><option value="DEAD">متوفى</option></select></div></div><div class="actions"><button class="btn primary">حفظ</button><button type="button" class="btn" id="closePerson">إلغاء</button></div></form><div id="personMsg"></div></div></div>
 <div id="newsModal" class="modal hidden"><div class="modalCard"><h3>إضافة خبر متحرك — 48 ساعة</h3><form id="newsForm"><div class="field"><label>اختر الفرد</label><select id="newsPerson" required></select></div><div class="field"><label>نص الخبر</label><textarea id="newsText" maxlength="250" rows="4" required></textarea></div><button class="btn primary">إضافة إلى شريط الأخبار</button><button type="button" class="btn" id="closeNews">إلغاء</button></form><div id="newsMsg"></div></div></div>
 <div id="eventModal" class="modal hidden"><div class="modalCard"><h3>إضافة مناسبة مؤقتة — 3 أيام</h3><form id="eventForm"><div class="field"><label>اختر الفرد</label><select id="eventPerson" required></select></div><div class="field"><label>نوع المناسبة</label><select id="eventType"><option value="MARRIAGE">زواج</option><option value="ILLNESS">مرض</option><option value="HELP">مساعدة / احتياج</option><option value="DEATH_NOTICE">وفاة حديثة</option><option value="GRADUATION">تخرج</option><option value="JOB">عمل جديد</option><option value="OTHER">أخرى</option></select></div><div class="field"><label>تفاصيل</label><textarea id="eventText" rows="3"></textarea></div><button class="btn primary">حفظ المناسبة</button><button type="button" class="btn" id="closeEvent">إلغاء</button></form><div id="eventMsg"></div></div></div>
 
 <script>
-const API="https://script.google.com/macros/s/AKfycbyjH2tRC9gADZVcmVcEpyjbqWR4MyWVAn1IQMxo5sgf3LQ84AofK29Kwk69EEfKNiVD9w/exec";let token="",role="",sessionType="",familyId=null,familyName="",people=[],news=[],events=[],selectedParent=null,otpId="",zoom=1;
+const API="https://script.google.com/macros/s/AKfycbyjH2tRC9gADZVcmVcEpyjbqWR4MyWVAn1IQMxo5sgf3LQ84AofK29Kwk69EEfKNiVD9w/exec";let token="",role="",sessionType="",familyId=null,familyName="",people=[],news=[],events=[],selectedParent=null,editingPersonId=null,personMode="ADD",otpId="",zoom=1;
 const $=id=>document.getElementById(id), esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
 async function api(action,data={}){
  const endpoint=API+(API.includes("?")?"&":"?")+"v=7&t="+Date.now();
@@ -129,7 +144,24 @@ $("eventsBtn").onclick=async()=>{setActiveNav("eventsBtn");if(!familyId){if(sess
 $("familiesBtn").onclick=async()=>{setActiveNav("familiesBtn");await loadFamilies()};
 $("usersBtn").onclick=async()=>{setActiveNav("usersBtn");if(!familyId){alert("اختر العائلة أولاً");if(sessionType==="ADMIN")await loadFamilies();return}await loadUsers()};
 $("logout").onclick=()=>location.reload();
-async function loadFamilies(){try{show("familiesPage");let r=await api("listFamilies",{token});if(!r.success){alert(r.message);return}$("familyRows").innerHTML=(r.families||[]).map(f=>`<tr><td>${f.familyId}</td><td>${esc(f.familyName)}</td><td>${esc(f.sheetName)}</td><td>${esc(f.status)}</td><td><button class="btn openF" data-id="${f.familyId}" data-name="${esc(f.familyName)}">فتح الشجرة</button></td></tr>`).join("")||`<tr><td colspan="5">لا توجد عائلات بعد</td></tr>`;document.querySelectorAll(".openF").forEach(b=>b.onclick=async()=>{familyId=Number(b.dataset.id);familyName=b.dataset.name;setActiveNav("treeBtn");await loadAll()})}catch(x){alert("تعذر فتح العائلات: "+x.message)}}
+async function loadFamilies(){
+ try{
+  show("familiesPage");
+  let r=await api("listFamilies",{token});
+  if(!r.success){alert(r.message);return}
+  $("familyRows").innerHTML=(r.families||[]).map(f=>`<tr>
+   <td>${f.familyId}</td><td>${esc(f.familyName)}</td><td>${esc(f.sheetName)}</td><td>${esc(f.status)}</td>
+   <td><button class="btn openF" data-id="${f.familyId}" data-name="${esc(f.familyName)}">فتح الشجرة</button>
+   <button class="btn red delF" data-id="${f.familyId}" data-name="${esc(f.familyName)}">حذف</button></td></tr>`).join("")||`<tr><td colspan="5">لا توجد عائلات بعد</td></tr>`;
+  document.querySelectorAll(".openF").forEach(b=>b.onclick=async()=>{familyId=Number(b.dataset.id);familyName=b.dataset.name;setActiveNav("treeBtn");await loadAll()});
+  document.querySelectorAll(".delF").forEach(b=>b.onclick=async()=>{
+   if(!confirm(`سيتم حذف عائلة "${b.dataset.name}" وجميع أفرادها ومستخدميها وأخبارها ومناسباتها نهائيًا. هل أنت متأكد؟`))return;
+   let r2=await api("deleteFamily",{token,familyId:Number(b.dataset.id)});
+   alert(r2.message||"");
+   if(r2.success){if(Number(familyId)===Number(b.dataset.id)){familyId=null;familyName=""}await loadFamilies()}
+  });
+ }catch(x){alert("تعذر فتح العائلات: "+x.message)}
+}
 $("familyForm").onsubmit=async e=>{e.preventDefault();try{let r=await api("createFamily",{token,familyName:$("newFamily").value.trim(),username:$("managerUser").value.trim(),password:$("managerPass").value});msg($("familyMsg"),r.message,!r.success);if(r.success){e.target.reset();familyId=Number(r.familyId);familyName=r.familyName;await loadAll();setActiveNav("treeBtn")}}catch(x){msg($("familyMsg"),x.message,true)}};
 async function loadAll(){
  show("treePage");
@@ -143,14 +175,84 @@ async function loadTree(){let r=await api("getFamilyTree",{token,familyId});if(!
  $("addEventBtn").disabled=people.length===0;
  renderStats();renderTree();fillPeople()}
 function roots(){return people.filter(p=>p.parentId==null||!people.some(x=>x.id===p.parentId))}function kids(id){return people.filter(p=>p.parentId===id)}
-function node(p){return `<li><button class="person ${p.gender==="F"?"female":""} ${p.life==="DEAD"?"dead":""} ${p.parentId==null?"root":""}" data-person="${p.id}"><span class="avatar">${p.gender==="F"?"👩":"👨"}</span><span class="pname">${esc(p.name)}</span><span class="pmeta">${p.age!=null?esc(p.age)+" سنة":""}${p.job?" • "+esc(p.job):""}</span>${p.phone?`<span class="pphone">☎ ${esc(p.phone)}</span>`:""}<span class="life">${p.life==="DEAD"?"متوفى":"● حي"}</span></button>${kids(p.id).length?`<ul>${kids(p.id).map(node).join("")}</ul>`:""}</li>`}
+function node(p){const ageText=p.life==="DEAD"?"":(p.age!=null?`${esc(p.age)} سنة`:"");return `<li><button class="person ${p.gender==="F"?"female":""} ${p.life==="DEAD"?"dead":""} ${p.parentId==null?"root":""}" data-person="${p.id}"><span class="pname">${esc(p.name)}</span>${ageText?`<span class="pmeta">${ageText}</span>`:""}</button>${kids(p.id).length?`<ul>${kids(p.id).map(node).join("")}</ul>`:""}</li>`}
 function renderTree(){$("tree").innerHTML=people.length?`<ul>${roots().map(node).join("")}</ul>`:`<div style="background:#fff;padding:25px;border-radius:12px">لا يوجد أفراد بعد — ابدأ بإضافة الجد الأكبر.</div>`;document.querySelectorAll("[data-person]").forEach(b=>b.onclick=()=>openPerson(+b.dataset.person));autoFit()}
 function autoFit(){let n=people.length;let z=n<=12?1:n<=30?.86:n<=60?.72:n<=100?.6:.5;setZoom(z)}
-function setZoom(z){zoom=Math.max(.38,Math.min(1.5,z));$("treeStage").style.zoom=zoom}$("zoomIn").onclick=()=>setZoom(zoom+.08);$("zoomOut").onclick=()=>setZoom(zoom-.08);$("zoomReset").onclick=autoFit;
-function renderStats(){let t=people.length,l=people.filter(p=>p.life!=="DEAD").length,d=t-l,a1=0,a2=0,a3=0,a4=0;people.filter(p=>p.life!=="DEAD"&&p.age!=null).forEach(p=>p.age<18?a1++:p.age<=40?a2++:p.age<=60?a3++:a4++);$("stTotal").textContent=t;$("stLive").textContent=l;$("stDead").textContent=d;$("stLivePct").textContent=pct(l,t)+"%";$("stDeadPct").textContent=pct(d,t)+"%";[a1,a2,a3,a4].forEach((v,i)=>{$("stA"+(i+1)).textContent=v;$("bar"+(i+1)+"n").textContent=v;$("bar"+(i+1)).style.width=(t?pct(v,t):0)+"%"})}
-function canEdit(){return sessionType==="ADMIN"||role==="MANAGER"||role==="EDITOR"}function openPerson(id){if(!canEdit())return;selectedParent=id;let p=people.find(x=>x.id===id);$("personTitle").textContent="إضافة فرع تحت: "+p.name;$("personForm").reset();$("personModal").classList.remove("hidden")}
-$("addRootBtn").onclick=()=>{if(!canEdit())return;if(people.length){alert("الجد الأكبر موجود بالفعل. أضف الفروع بالضغط على الشخص المطلوب.");return}selectedParent=null;$("personTitle").textContent="إضافة الجد الأكبر";$("personForm").reset();$("personModal").classList.remove("hidden")};$("closePerson").onclick=()=>$("personModal").classList.add("hidden");
-$("personForm").onsubmit=async e=>{e.preventDefault();let r=await api("addPerson",{token,familyId,parentId:selectedParent,name:$("pName").value.trim(),phone:$("pPhone").value.trim(),age:$("pAge").value,job:$("pJob").value.trim(),gender:$("pGender").value,lifeStatus:$("pLife").value});msg($("personMsg"),r.message,!r.success);if(r.success){$("personModal").classList.add("hidden");loadAll()}};
+function setZoom(z){zoom=Math.max(.25,Math.min(2.5,z));$("treeStage").style.zoom=zoom}$("zoomIn").onclick=()=>setZoom(zoom+.12);$("zoomOut").onclick=()=>setZoom(zoom-.12);$("zoomReset").onclick=autoFit;
+function renderStats(){
+ let t=people.length,l=people.filter(p=>p.life!=="DEAD").length,d=t-l,a1=0,a2=0;
+ people.filter(p=>p.life!=="DEAD"&&p.age!=null).forEach(p=>p.age>=1&&p.age<=21?a1++:p.age>21?a2++:0);
+ $("stTotal").textContent=t;$("stLive").textContent=l;$("stDead").textContent=d;
+ $("stLivePct").textContent=pct(l,t)+"%";$("stDeadPct").textContent=pct(d,t)+"%";
+ $("stA1").textContent=a1;$("stA2").textContent=a2;
+ $("bar1n").textContent=a1;$("bar2n").textContent=a2;
+ $("bar1").style.width=(l?pct(a1,l):0)+"%";$("bar2").style.width=(l?pct(a2,l):0)+"%";
+}
+function canEdit(){return sessionType==="ADMIN"||role==="MANAGER"||role==="EDITOR"}
+
+function fillPersonForm(p){
+ $("pName").value=p?.name||"";$("pPhone").value=p?.phone||"";$("pAge").value=p?.age??"";
+ $("pJob").value=p?.job||"";$("pGender").value=p?.gender||"M";$("pLife").value=p?.life||"ALIVE";
+ toggleDeadAge();
+}
+function toggleDeadAge(){
+ const dead=$("pLife").value==="DEAD";
+ $("pAge").disabled=dead;
+ if(dead)$("pAge").value="";
+}
+$("pLife").onchange=toggleDeadAge;
+
+function openPerson(id){
+ if(!canEdit())return;
+ const p=people.find(x=>x.id===id);if(!p)return;
+ editingPersonId=id;selectedParent=p.parentId;personMode="ACTIONS";
+ $("personTitle").textContent=p.name;
+ $("personActions").classList.remove("hidden");
+ $("personForm").classList.add("hidden");
+ $("personMsg").innerHTML="";
+ $("personModal").classList.remove("hidden");
+}
+$("addChildAction").onclick=()=>{
+ const p=people.find(x=>x.id===editingPersonId);if(!p)return;
+ personMode="ADD";selectedParent=p.id;editingPersonId=null;
+ $("personTitle").textContent="إضافة فرع تحت: "+p.name;
+ $("personActions").classList.add("hidden");$("personForm").classList.remove("hidden");
+ $("personForm").reset();toggleDeadAge();
+};
+$("editPersonAction").onclick=()=>{
+ const p=people.find(x=>x.id===editingPersonId);if(!p)return;
+ personMode="EDIT";selectedParent=p.parentId;
+ $("personTitle").textContent="تعديل: "+p.name;
+ $("personActions").classList.add("hidden");$("personForm").classList.remove("hidden");
+ fillPersonForm(p);
+};
+$("deletePersonAction").onclick=async()=>{
+ const p=people.find(x=>x.id===editingPersonId);if(!p)return;
+ if(!confirm(`هل تريد حذف "${p.name}"؟ لا يمكن حذف فرد لديه فروع تحته.`))return;
+ const r=await api("deletePerson",{token,familyId,personId:p.id});
+ alert(r.message||"");
+ if(r.success){$("personModal").classList.add("hidden");await loadAll()}
+};
+
+$("addRootBtn").onclick=()=>{
+ if(!canEdit())return;if(people.length){alert("الجد الأكبر موجود بالفعل. أضف الفروع بالضغط على الشخص المطلوب.");return}
+ personMode="ADD";editingPersonId=null;selectedParent=null;
+ $("personTitle").textContent="إضافة الجد الأكبر";$("personActions").classList.add("hidden");
+ $("personForm").classList.remove("hidden");$("personForm").reset();toggleDeadAge();
+ $("personModal").classList.remove("hidden")
+};
+$("closePerson").onclick=()=>$("personModal").classList.add("hidden");
+
+$("personForm").onsubmit=async e=>{
+ e.preventDefault();
+ const payload={token,familyId,parentId:selectedParent,name:$("pName").value.trim(),phone:$("pPhone").value.trim(),
+  age:$("pLife").value==="DEAD"?"":$("pAge").value,job:$("pJob").value.trim(),gender:$("pGender").value,lifeStatus:$("pLife").value};
+ let r;
+ if(personMode==="EDIT"){payload.personId=editingPersonId;r=await api("updatePerson",payload)}
+ else r=await api("addPerson",payload);
+ msg($("personMsg"),r.message,!r.success);
+ if(r.success){$("personModal").classList.add("hidden");await loadAll()}
+};
 function fillPeople(){let o=people.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join("");$("newsPerson").innerHTML=o;$("eventPerson").innerHTML=o}
 async function loadNews(){
  try{
@@ -209,3 +311,15 @@ async function loadUsers(){
 }
 $("addUserForm").onsubmit=async e=>{e.preventDefault();let r=await api("createUser",{token,familyId,username:$("newUser").value.trim(),password:$("newPass").value,role:$("newRole").value});msg($("userMsg"),r.message,!r.success);if(r.success){e.target.reset();loadUsers()}};
 </script></body></html>
+<style>
+/* V9 — tree-only visual controls */
+.person{padding:8px 6px}
+.person .avatar,.person .pphone,.person .life{display:none!important}
+.person .pname{font-size:13px;line-height:1.35}
+.person .pmeta{font-size:11px;margin-top:4px}
+.tree-zoom{display:inline-flex;align-items:center;gap:5px;border-right:1px solid #d8e0e8;padding-right:7px}
+.tree-zoom .btn{min-width:42px;font-size:18px}
+.person-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.person-actions .btn{min-height:42px}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
