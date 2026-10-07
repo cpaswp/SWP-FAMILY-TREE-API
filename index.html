@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="swp-version" content="V18-PREMIUM-RESPONSIVE-HEADER-2026-10-07"><title>SWP FAMILY TREE</title>
+<meta name="swp-version" content="V18-FAMILY-PERMISSIONS-FINAL-2026-10-07"><title>SWP FAMILY TREE</title>
 <style>
 :root{--n:#062b55;--n2:#0a4075;--g:#d7aa43;--cream:#fff7e4;--bg:#eef3f7;--ink:#10243a;--muted:#6b7b8e;--green:#159447;--red:#c82b35;--pink:#e83e8c;--blue:#1476df;--orange:#f18b24;--violet:#7b43db}
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.hidden{display:none!important}
@@ -324,7 +324,7 @@ input,select,textarea{min-height:42px}
 </div></div>
 
 <section id="familiesPage" class="admin-page hidden"><h2>إدارة العائلات</h2><form id="familyForm"><div class="grid"><div class="field"><label>اسم العائلة</label><input id="newFamily" required></div><div class="field"><label>يوزر مدير العائلة</label><input id="managerUser" required></div><div class="field"><label>كلمة السر</label><input id="managerPass" type="password" required></div></div><button class="btn primary">إنشاء العائلة</button></form><div id="familyMsg"></div><div class="tableWrap"><table><thead><tr><th>رقم</th><th>العائلة</th><th>الورقة</th><th>الحالة</th><th>الإجراءات</th></tr></thead><tbody id="familyRows"></tbody></table></div></section>
-<section id="usersPage" class="admin-page hidden"><h2>مستخدمو العائلة</h2><form id="addUserForm"><div class="grid"><div class="field"><label>اسم المستخدم</label><input id="newUser" required></div><div class="field"><label>كلمة السر</label><input id="newPass" type="password" required></div><div class="field"><label>الصلاحية</label><select id="newRole"><option value="EDITOR">مستخدم - إضافة وتعديل</option><option value="VIEWER">مشاهدة فقط</option><option value="MANAGER">مدير العائلة</option></select></div></div><button class="btn primary">إضافة مستخدم</button></form><div id="userMsg"></div><div class="tableWrap"><table><thead><tr><th>المستخدم</th><th>الصلاحية</th><th>الحالة</th><th></th></tr></thead><tbody id="userRows"></tbody></table></div></section>
+<section id="usersPage" class="admin-page hidden"><h2>مستخدمو العائلة</h2><form id="addUserForm"><div class="grid"><div class="field"><label>اسم المستخدم</label><input id="newUser" required></div><div class="field"><label>كلمة السر</label><input id="newPass" type="password" required></div><div class="field"><label>الصلاحية</label><select id="newRole"><option value="EDITOR">مستخدم - إضافة وتعديل</option><option value="VIEWER">مشاهدة فقط</option><option value="MANAGER">مدير العائلة</option></select></div></div><button class="btn primary">إضافة مستخدم</button></form><div id="userMsg"></div><div id="usersAdminTable" class="tableWrap"><table><thead><tr><th>المستخدم</th><th>الصلاحية</th><th>الحالة</th><th></th></tr></thead><tbody id="userRows"></tbody></table></div></section>
 </main>
 <footer class="footer"><span>SWP FAMILY TREE SYSTEM</span><span>تصميم وتطوير المشروع بواسطة <b>عبدالله أحمد الأعرج <span style="opacity:.55">• V17</span></b></span><span>جذورنا • حاضرنا • مستقبلنا</span></footer>
 </div>
@@ -400,6 +400,7 @@ function enter(){
  $("who").textContent=sessionType==="ADMIN"?"الأدمن":role+" — "+familyName;
  $("familiesBtn").classList.toggle("hidden",sessionType!=="ADMIN");
  $("usersBtn").classList.toggle("hidden",!(sessionType==="ADMIN"||role==="MANAGER"));
+ if($("usersAdminTable"))$("usersAdminTable").classList.toggle("hidden",sessionType!=="ADMIN");
  $("printBtn").classList.toggle("hidden",sessionType!=="ADMIN");
  const editOK=sessionType==="ADMIN"||role==="MANAGER"||role==="EDITOR";
  $("addNewsBtn").classList.toggle("hidden",!editOK);
@@ -448,7 +449,7 @@ async function loadFamilies(){
   });
  }catch(x){alert("تعذر فتح العائلات: "+x.message)}
 }
-$("familyForm").onsubmit=async e=>{e.preventDefault();try{let r=await api("createFamily",{token,familyName:$("newFamily").value.trim(),username:$("managerUser").value.trim(),password:$("managerPass").value});msg($("familyMsg"),r.message,!r.success);if(r.success){e.target.reset();familyId=Number(r.familyId);familyName=r.familyName;saveSession();await loadAll();setActiveNav("treeBtn")}}catch(x){msg($("familyMsg"),x.message,true)}};
+$("familyForm").onsubmit=async e=>{e.preventDefault();try{const createdFamily=$("newFamily").value.trim(),createdUser=$("managerUser").value.trim(),createdPass=$("managerPass").value;let r=await api("createFamily",{token,familyName:createdFamily,username:createdUser,password:createdPass});msg($("familyMsg"),r.message,!r.success);if(r.success){alert(`تم إنشاء العائلة بنجاح\n\nاسم العائلة: ${r.familyName||createdFamily}\nاسم المستخدم: ${createdUser}\nكلمة السر: ${createdPass}`);e.target.reset();familyId=Number(r.familyId);familyName=r.familyName;saveSession();await loadAll();setActiveNav("treeBtn")}}catch(x){msg($("familyMsg"),x.message,true)}};
 async function loadAll(){
  show("treePage");
  try{
@@ -556,7 +557,7 @@ async function loadNews(){
   news=r.news||[];
   let html=news.map(n=>`<span class="news-item">📰 <b>${esc(n.personName)}</b> ${esc(n.text)} <small>• ${esc(n.remaining||"")}</small></span>`).join("");
   $("tickerTrack").innerHTML=html||`<span class="news-item">لا توجد أخبار حالية</span>`;
-  $("newsList").innerHTML=news.map(n=>`<div class="event"><b>${esc(n.personName)}</b>${esc(n.text)}<small>${esc(n.remaining||"")}</small></div>`).join("")||"لا توجد أخبار";
+  $("newsList").innerHTML=news.map(n=>`<div class="event"><b>${esc(n.personName)}</b>${esc(n.text)}<small>${esc(n.remaining||"")}</small>${sessionType==="ADMIN"?`<button type="button" class="btn red adminDelNews" data-id="${n.id||n.newsId||n.news_id}" style="margin-top:6px">🗑 إزالة الخبر</button>`:""}</div>`).join("")||"لا توجد أخبار";if(sessionType==="ADMIN")document.querySelectorAll(".adminDelNews").forEach(b=>b.onclick=async()=>{if(!confirm("هل تريد إزالة هذا الخبر؟"))return;let d=await api("deleteNews",{token,familyId,newsId:b.dataset.id});if(!d.success){alert(d.message||"تعذر إزالة الخبر");return}await loadNews()});
  }catch(x){
   $("tickerTrack").innerHTML=`<span class="news-item">تعذر تحميل الأخبار</span>`;
   $("newsList").textContent="تعذر تحميل الأخبار: "+x.message;
@@ -567,7 +568,7 @@ async function loadEvents(){
   let r=await api("listEvents",{token,familyId});
   if(!r.success)throw new Error(r.message||"تعذر تحميل المناسبات");
   events=r.events||[];
-  $("eventList").innerHTML=events.map(n=>`<div class="event"><b>${esc(n.personName)} — ${esc(n.eventLabel||n.eventType)}</b>${esc(n.text||"")}<small>${esc(n.remaining||"")}</small></div>`).join("")||"لا توجد مناسبات";
+  $("eventList").innerHTML=events.map(n=>`<div class="event"><b>${esc(n.personName)} — ${esc(n.eventLabel||n.eventType)}</b>${esc(n.text||"")}<small>${esc(n.remaining||"")}</small>${sessionType==="ADMIN"?`<button type="button" class="btn red adminDelEvent" data-id="${n.id||n.eventId||n.event_id}" style="margin-top:6px">🗑 إزالة المناسبة</button>`:""}</div>`).join("")||"لا توجد مناسبات";if(sessionType==="ADMIN")document.querySelectorAll(".adminDelEvent").forEach(b=>b.onclick=async()=>{if(!confirm("هل تريد إزالة هذه المناسبة؟"))return;let d=await api("deleteEvent",{token,familyId,eventId:b.dataset.id});if(!d.success){alert(d.message||"تعذر إزالة المناسبة");return}await loadEvents()});
  }catch(x){
   $("eventList").textContent="تعذر تحميل المناسبات: "+x.message;
  }
@@ -600,6 +601,8 @@ $("printBtn").onclick=async()=>{if(sessionType!=="ADMIN")return;
 async function loadUsers(){
  try{
   show("usersPage");
+  if($("usersAdminTable"))$("usersAdminTable").classList.toggle("hidden",sessionType!=="ADMIN");
+  if(sessionType!=="ADMIN"){$("userRows").innerHTML="";return;}
   let r=await api("listUsers",{token,familyId});
   if(!r.success){alert(r.message);return}
   $("userRows").innerHTML=(r.users||[]).map(u=>`<tr><td>${esc(u.username)}</td><td>${esc(u.role)}</td><td>${String(u.active).toLowerCase()==="true"?"نشط":"موقوف"}</td><td><button class="btn toggleU" data-id="${u.userId}" data-active="${u.active}">${String(u.active).toLowerCase()==="true"?"إيقاف":"تفعيل"}</button></td></tr>`).join("")||`<tr><td colspan="4">لا يوجد مستخدمون</td></tr>`;
@@ -612,7 +615,7 @@ async function loadUsers(){
   });
  }catch(x){alert("تعذر فتح المستخدمين: "+x.message)}
 }
-$("addUserForm").onsubmit=async e=>{e.preventDefault();let r=await api("createUser",{token,familyId,username:$("newUser").value.trim(),password:$("newPass").value,role:$("newRole").value});msg($("userMsg"),r.message,!r.success);if(r.success){e.target.reset();loadUsers()}};
+$("addUserForm").onsubmit=async e=>{e.preventDefault();const createdUser=$("newUser").value.trim(),createdPass=$("newPass").value;let r=await api("createUser",{token,familyId,username:createdUser,password:createdPass,role:$("newRole").value});msg($("userMsg"),r.message,!r.success);if(r.success){alert(`تم إنشاء المستخدم بنجاح\n\nاسم العائلة: ${familyName||""}\nاسم المستخدم: ${createdUser}\nكلمة السر: ${createdPass}`);e.target.reset();loadUsers()}};
 
 (async function restoreSession(){
   try{
