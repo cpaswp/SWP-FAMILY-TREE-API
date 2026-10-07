@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="swp-version" content="V17-SAFE-TREE-HEADER-2026-10-07"><title>SWP FAMILY TREE</title>
+<meta name="swp-version" content="V18-PREMIUM-RESPONSIVE-HEADER-2026-10-07"><title>SWP FAMILY TREE</title>
 <style>
 :root{--n:#062b55;--n2:#0a4075;--g:#d7aa43;--cream:#fff7e4;--bg:#eef3f7;--ink:#10243a;--muted:#6b7b8e;--green:#159447;--red:#c82b35;--pink:#e83e8c;--blue:#1476df;--orange:#f18b24;--violet:#7b43db}
 *{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}.hidden{display:none!important}
@@ -120,6 +120,166 @@ input,select,textarea{min-height:42px}
  .final-family-head .family-name div{font-size:9px!important}
  .final-family-head .company-mark{width:58px!important;height:58px!important}
  .final-family-head .swp-mark{width:76px!important;height:58px!important}
+}
+
+
+/* ===== SWP V18 WORLD-CLASS RESPONSIVE HEADER — CSS ONLY =====
+   Keeps every existing header component and all application logic untouched.
+*/
+.swp-final-header{
+  --hdr-gold:#d7aa43;
+  --hdr-gold2:#f3d57c;
+  --hdr-deep:#03182f;
+  --hdr-blue:#073b6c;
+  position:relative!important;
+  isolation:isolate;
+  min-height:0!important;
+  border-bottom:2px solid var(--hdr-gold)!important;
+  background:
+    radial-gradient(circle at 50% -45%,rgba(255,255,255,.14),transparent 48%),
+    radial-gradient(circle at 8% 50%,rgba(215,170,67,.12),transparent 30%),
+    radial-gradient(circle at 92% 45%,rgba(215,170,67,.10),transparent 28%),
+    linear-gradient(120deg,var(--hdr-deep) 0%,#062d55 47%,var(--hdr-blue) 100%)!important;
+  box-shadow:0 6px 22px rgba(3,24,47,.16)!important;
+  overflow:hidden!important
+}
+.swp-final-header:before{
+  content:""!important;position:absolute!important;inset:0!important;z-index:-1!important;
+  background:
+    linear-gradient(115deg,transparent 0 17%,rgba(255,255,255,.025) 17.2% 17.7%,transparent 18% 82%,rgba(215,170,67,.035) 82.2% 82.8%,transparent 83%)!important;
+  pointer-events:none!important
+}
+.swp-final-header:after{
+  content:""!important;position:absolute!important;left:6%!important;right:6%!important;bottom:0!important;height:1px!important;
+  background:linear-gradient(90deg,transparent,var(--hdr-gold),transparent)!important;opacity:.8!important
+}
+.swp-final-header .verse{
+  position:relative!important;
+  padding:7px 18px 3px!important;
+  margin:0 auto!important;
+  width:min(900px,76vw)!important;
+  text-align:center!important;
+  font-family:"Traditional Arabic","Amiri","Noto Naskh Arabic",Tahoma,serif!important;
+  font-size:clamp(17px,1.55vw,23px)!important;
+  line-height:1.35!important;
+  font-weight:700!important;
+  letter-spacing:.1px!important;
+  color:#fff6dc!important;
+  text-shadow:0 1px 2px rgba(0,0,0,.45)!important
+}
+.final-family-head{
+  direction:ltr!important;
+  display:grid!important;
+  grid-template-columns:minmax(112px,190px) minmax(260px,1fr) minmax(112px,190px)!important;
+  align-items:center!important;
+  width:min(1380px,100%)!important;
+  margin:0 auto!important;
+  gap:clamp(10px,2vw,30px)!important;
+  padding:2px clamp(16px,3vw,42px) 10px!important;
+  min-height:90px!important
+}
+.final-family-head .family-name{
+  direction:rtl!important;text-align:center!important;min-width:0!important;
+  padding:0 8px!important
+}
+.final-family-head .family-name h1{
+  margin:0!important;
+  color:var(--hdr-gold2)!important;
+  font-size:clamp(23px,2.15vw,34px)!important;
+  line-height:1.18!important;
+  font-weight:800!important;
+  text-shadow:0 2px 3px rgba(0,0,0,.38)!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important
+}
+.final-family-head .family-name div{
+  margin-top:4px!important;
+  color:#e7eef7!important;
+  font-size:clamp(10px,.9vw,13px)!important;
+  line-height:1.3!important;
+  letter-spacing:.2px!important
+}
+.final-family-head .brandLogo{
+  position:relative!important;
+  margin:0!important;
+  padding:4px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  border:1px solid rgba(215,170,67,.7)!important;
+  border-radius:14px!important;
+  background:linear-gradient(145deg,rgba(0,5,12,.96),rgba(5,20,36,.92))!important;
+  box-shadow:0 5px 18px rgba(0,0,0,.25),inset 0 0 0 1px rgba(255,255,255,.025)!important;
+  overflow:hidden!important
+}
+.final-family-head .brandLogo img{
+  width:100%!important;height:100%!important;display:block!important;
+  object-fit:contain!important;object-position:center!important;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))!important
+}
+.final-family-head .company-mark{
+  grid-column:1!important;justify-self:start!important;
+  width:clamp(78px,7.2vw,104px)!important;height:clamp(68px,6.3vw,86px)!important
+}
+.final-family-head .swp-mark{
+  grid-column:3!important;justify-self:end!important;
+  width:clamp(116px,10.8vw,154px)!important;height:clamp(70px,6.6vw,90px)!important
+}
+
+/* Tablet */
+@media (max-width:900px){
+ .swp-final-header .verse{width:min(760px,86vw)!important;padding-top:6px!important}
+ .final-family-head{
+   grid-template-columns:96px minmax(180px,1fr) 116px!important;
+   gap:9px!important;padding:2px 12px 8px!important;min-height:78px!important
+ }
+ .final-family-head .company-mark{width:72px!important;height:66px!important}
+ .final-family-head .swp-mark{width:104px!important;height:68px!important}
+ .final-family-head .family-name h1{font-size:clamp(21px,3.2vw,28px)!important}
+}
+
+/* Phone: preserve all three components in one elegant row */
+@media (max-width:600px){
+ .swp-final-header{border-bottom-width:2px!important}
+ .swp-final-header .verse{
+   width:100%!important;
+   padding:5px 8px 2px!important;
+   font-size:clamp(13px,3.65vw,16px)!important;
+   line-height:1.35!important
+ }
+ .final-family-head{
+   grid-template-columns:64px minmax(0,1fr) 76px!important;
+   gap:5px!important;
+   padding:2px 6px 7px!important;
+   min-height:62px!important
+ }
+ .final-family-head .family-name{padding:0 2px!important}
+ .final-family-head .family-name h1{
+   font-size:clamp(16px,5vw,21px)!important;
+   line-height:1.15!important
+ }
+ .final-family-head .family-name div{
+   margin-top:2px!important;font-size:clamp(8px,2.4vw,10px)!important;
+   white-space:nowrap!important
+ }
+ .final-family-head .brandLogo{padding:2px!important;border-radius:9px!important}
+ .final-family-head .company-mark{width:56px!important;height:54px!important;justify-self:start!important}
+ .final-family-head .swp-mark{width:70px!important;height:54px!important;justify-self:end!important}
+}
+
+/* Very small phones */
+@media (max-width:380px){
+ .swp-final-header .verse{font-size:12.5px!important;padding-inline:5px!important}
+ .final-family-head{grid-template-columns:55px minmax(0,1fr) 63px!important;gap:3px!important;padding-inline:4px!important}
+ .final-family-head .company-mark{width:50px!important;height:49px!important}
+ .final-family-head .swp-mark{width:59px!important;height:49px!important}
+ .final-family-head .family-name h1{font-size:15px!important}
+ .final-family-head .family-name div{font-size:7.5px!important}
+}
+
+/* Header print remains clean and balanced */
+@media print{
+ .swp-final-header{box-shadow:none!important}
+ .swp-final-header .verse{width:100%!important}
+ .final-family-head{width:100%!important}
 }
 
 </style><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
